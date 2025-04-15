@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:sectortechnology/src/features/feature_name/presentation/pages/auth/sign_up.dart';
 
 
 class AppRoutes {
   static Route generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case RouteNames.splash:
-      //   return navigate(const SplashScreen());
+      case RouteNames.signUp:
+        return navigate( SignUp());
       // case RouteNames.onBoarding:
       //   return navigate(const OnBoardingScreen());
       // case RouteNames.sign_in:
@@ -31,3 +32,6 @@ class AppRoutes {
   static navigate(Widget widget) =>
       MaterialPageRoute(builder: (context) => widget);
 }
+ class RouteNames {
+  static const String signUp = "signUp";
+ }
